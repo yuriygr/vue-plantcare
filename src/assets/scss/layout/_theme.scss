@@ -1,0 +1,42 @@
+:root {
+  // Thumbs
+  --thumb-width: 240px;
+  --thumb-height: 155px;
+  --thumb-border-radius: 8px;
+
+  --letter-border-radius: var(--thumb-border-radius);
+  --letter-height: var(--thumb-height);
+
+  --search-border-radius: var(--thumb-border-radius);
+
+  --thumbs-template-columns: calc(var(--thumb-width) / 2) 1fr;
+  --thumbs-grid-template-columns: repeat(auto-fill, minmax(var(--thumb-width), 1fr));
+
+  // Norma
+  --tabbar--height: 48px;
+
+  --large-screen-max-width: 620px;
+  --wide-large-screen-max-width: 1720px;
+
+  --mobile-page-vertical-padding: 12px;
+  --desktop-page-vertical-padding: 2rem;
+
+  --mobile-page-horizontal-padding: 12px;
+  --desktop-page-horizontal-padding: 24px;
+}
+
+// Светлая тема
+html {
+  --x-background: #fff;
+  --x-color: #111;
+
+  --tabbar--background: #fff;
+}
+
+// Темная тема
+html[data-theme="black"] {
+  --x-background: #111;
+  --x-color: #fffcea;
+
+  --tabbar--background: #111;
+}
