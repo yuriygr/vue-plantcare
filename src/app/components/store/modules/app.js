@@ -12,6 +12,7 @@ export default {
       basePath: process.env.VUE_APP_BASE_URL,
       theme:    process.env.VUE_APP_DEFAULT_THEME,
       pwa:      process.env.VUE_APP_PWA_ENABLED,
+      version:  process.env.PACKAGE_VERSION,
 
       loading: false,
   

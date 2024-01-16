@@ -24,6 +24,7 @@
 
 <script>
 import { NHeader, Separator, NavigationSection, NavigationItem, NavigationFooter} from '@vue-norma/ui'
+import { mapState } from 'vuex'
 
 export default {
   name: 'about',
@@ -40,12 +41,10 @@ export default {
     }
   },
   computed: {
-    appTitle() {
-      return process.env.VUE_APP_TITLE
-    },
-    appVersion() {
-      return '2.10.1'
-    },
+    ...mapState('app', {
+      'appTitle': state => state.title,
+      'appVersion': state => state.version
+    }),
     metaItems() {
       return [
         { label: this.$t('app.version', { version: this.appVersion }) }
